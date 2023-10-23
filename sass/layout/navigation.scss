@@ -27,19 +27,24 @@
         z-index: 3;
         background-color: $color-white;
         color: $color-red;
-        padding: 1.5rem;
         font-size: 4rem;
-        height: 7rem;
-        width: 7rem;
+        height: 5rem;
+        width: 5rem;
         position: fixed;
-        top: 6rem;
-        right: 6rem;
+        top: 3rem;
+        right: 3rem;
         border-radius: 50%;
         transition: all .8s cubic-bezier(0.86,0,0.07,1);
         
         box-shadow: 0 0rem 3rem rgba($color-white, .6);
         text-align: center;
         cursor: pointer;
+
+        & i {
+            margin-top: 3px;
+            width: 80%;
+            height: 80%;
+        }
 
 
         display: none;
@@ -48,12 +53,12 @@
         }
     }
     &__background {
-        height: 6rem;
-        width: 6rem;
+        height: 4rem;
+        width: 4rem;
         border-radius: 50%;
         position: fixed;
-        top: 6.5rem;
-        right: 6.5rem;
+        top: 3.5rem;
+        right: 3.5rem;
         background-image: radial-gradient($color-red-darker, $color-red-lighter);
         z-index: 2;
         transition: all .8s cubic-bezier(0.86,0,0.07,1);
