@@ -1,0 +1,30 @@
+//media query manager
+
+// 0-600px: phone
+// 600-900: tablet 
+// 900-1200: tablet landscape
+// 1200-1800: default
+// 1800+: big desktop
+
+//breakingpoint arguement choices:
+// phone
+// tab-port
+// tab-land
+// big-desktop
+
+//order: base+typo > general layout + grid > page layout > components
+  
+@mixin respond($breakpoint) {
+    @if $breakpoint == phone {
+        @media (max-width: 37.5rem) {@content}; //600px
+    }     
+    @if $breakpoint == tab-port {
+        @media (max-width: 56.25rem) {@content};  //900px
+    } 
+    @if $breakpoint == tab-land {
+        @media (max-width: 75rem) {@content};  //1200px
+    } 
+    @if $breakpoint == big-desktop {
+        @media (min-width: 112.5rem) {@content};  //1800px
+    } 
+}

@@ -3,11 +3,6 @@
     --tile-length: 17.5vmin;
     --animation-duration: 8s;
 }
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
 @keyframes move-twink-back {
     from {background-position:0 0;}
@@ -72,7 +67,7 @@
     height: inherit;
     width: inherit;
     /* background: radial-gradient(circle at center, transparent 25%, rgb(0, 0, 0) 60%); */
-    background: radial-gradient(circle at center, transparent 25%, $color-white , #07ffff);
+    background: radial-gradient(circle at center, transparent 25%, #fff , #27cdc3);
     z-index: 10;
 }
 

@@ -5,6 +5,25 @@
     overflow-x: hidden;
     
 }
-body {
+html {
     font-size: 62.5%; //1rem = 10px
+
+    @include respond(tab-land){
+        font-size: 56.25%; //1 rem = 9px | 56.25%
+    }
+    @include respond(tab-port){
+        font-size: 50%; //1 rem = 8px | 50%
+    }
+    // @include respond(phone){
+    //     font-size: 50%; //1 rem = 8px | 50%
+    // }
+    @include respond(big-desktop){
+        font-size: 75%;  //1 rem = 12px | 75%
+    }
+
+}
+body {
+    color: $color-white;
+    font-family: 'Lato', sans-serif;
+    
 }
