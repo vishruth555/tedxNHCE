@@ -12,6 +12,10 @@
     border-radius: 5px;
     transition: all .3s ease;
     box-shadow: 0 0rem 4rem rgba($color-white, .5);
+    
+    // @include respond(phone) {
+    //     transform: translate(-50%,-50%) scale(0.8);
+    // }
 
     &:hover {
         outline: 1rem solid $color-red;

@@ -1,0 +1,127 @@
+
+
+
+
+.navigation {
+    z-index: 5;
+    position: fixed;
+    right: -4rem;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    transition: all .8s cubic-bezier(0.86,0,0.07,1);
+
+    @include respond(phone) {
+        opacity: 0;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(1.5);
+        & span {
+            opacity: 1;
+        }
+    }
+
+    &__checkbox {
+        display: none;
+    }
+    &__button{
+        z-index: 3;
+        background-color: $color-white;
+        color: $color-red;
+        padding: 1.5rem;
+        font-size: 4rem;
+        height: 7rem;
+        width: 7rem;
+        position: fixed;
+        top: 6rem;
+        right: 6rem;
+        border-radius: 50%;
+        transition: all .8s cubic-bezier(0.86,0,0.07,1);
+        
+        box-shadow: 0 0rem 3rem rgba($color-white, .6);
+        text-align: center;
+        cursor: pointer;
+
+
+        display: none;
+        @include respond(phone){
+            display: inline-block;
+        }
+    }
+    &__background {
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50%;
+        position: fixed;
+        top: 6.5rem;
+        right: 6.5rem;
+        background-image: radial-gradient($color-red-darker, $color-red-lighter);
+        z-index: 2;
+        transition: all .8s cubic-bezier(0.86,0,0.07,1);
+        display: none;
+        @include respond(phone){
+            display: inline-block;
+        }
+
+    }
+    &__checkbox:checked + &__button {
+        transform: scale(1.2);
+    }
+    &__checkbox:checked ~ &__background {
+        transform: scale(80);
+    }
+    &__checkbox:checked ~ nav {
+        opacity: 1;
+    }
+
+    
+
+    &__container {
+        transition: all .4s;
+        transform: translateX(75%);
+        text-align: left;
+        display: block;
+        &:not(:last-child){
+            margin-bottom: 4rem;
+        }
+
+        &:hover span {
+            opacity: 1;
+        }
+        &:hover {
+            transform: translateX(0);
+        }
+        @include respond(phone) {
+            transform: translateX(0);
+            text-align: center;
+            &:not(:last-child){
+                margin-bottom: 8rem;
+            }
+        }
+    }
+
+    
+
+    &__link {
+        text-decoration: none;
+        color: $color-white;
+
+        &--1{
+            color: $color-red;
+        }
+        &--2 {
+            position: relative;
+            left: .3rem;
+        }
+
+    }
+    &__text {
+        transition: all .4s .1s;
+        opacity: 0;
+    }
+    &__icon {
+        vertical-align:text-top;
+        transition: all .4s ease;
+    }
+
+
+}
