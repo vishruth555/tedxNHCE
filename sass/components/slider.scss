@@ -8,8 +8,13 @@
     padding:5rem;
     background-color: #000000;
     box-shadow: 0 5px 10px #e0e0e0;
+    
     @include respond(tab-port){
         width: 70%;
+        height: 80%;
+    }
+    @include respond(phone){
+        width: 90%;
         height: 80%;
     }
     
